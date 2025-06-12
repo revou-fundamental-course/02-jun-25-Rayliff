@@ -17,14 +17,18 @@ body {
 html {
     scroll-behavior: smooth;
 }
+#about, #education, #project, #experience, #message-us {
+  scroll-margin-top: 80px;
+}
 
-/* === NAVBAR === */
+
+/*Navbar*/
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #382fda;
   background-image: linear-gradient(to right, #4f46e5, #3b82f6);
   color: white;
   display: flex;
@@ -33,36 +37,75 @@ html {
   padding: 14px 20px;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  
 }
 
-.navbar .logo {
-    border: 1px solid red;
-    height: 50px;
-    width: 50px;
-    background-image: url("../assets/profil.png");
-    background-size: cover; /* Untuk menyesuaikan gambar dengan ukuran kotaknya */
-    background-position: center;
-    border-radius: 50px;
+.logo {
+  height: 50px;
+  width: 50px;
+  background-image: url("../assets/profil.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1100;
 }
 
-.navbar .nav-links {
+/*desktop nav*/
+.nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.navbar .nav-links li a {
+.nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.navbar .nav-links li a:hover {
+.nav-links li a:hover {
   color: #c7d2fe;
-  
 }
+
+/*responsive hp dan tablet*/
+@media (max-width: 1024px) {
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50vw; /* HANYA SETENGAH LAYAR */
+    background-image: linear-gradient(to bottom, #4f46e5, #3b82f6);
+    flex-direction: column;
+    padding-top: 80px;
+    padding-left: 20px;
+    gap: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+
+  .navbar.nav-open .nav-links {
+    transform: translateX(0);
+  }
+
+  .navbar.nav-open .logo {
+    transform: translateX(50vw);
+    transition: transform 0.3s ease;
+  }
+}
+.logo {
+  transition: transform 0.3s ease;
+}
+
+
 
 
 
@@ -181,25 +224,25 @@ footer {
   color: #0e0197;
 }
 
-/* === SLIDER HEADER === */
+/*slider header*/
 .slider-header {
   position: relative;
   width: 100%;
-  height: 400px; /* atau 100vh kalau mau setinggi layar */
+  height: 400px; 
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* INI BAGIAN PENTING AGAR GAMBAR PENUH */
+
 .slider-header img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* inilah kuncinya! */
+  object-fit: cover; 
   display: block;
 }
 
-/* Overlay teks di atas gambar */
+/* Overlay teks di pada gambar slide */
 .slider-overlay {
   position: absolute;
   top: 0;
@@ -225,6 +268,15 @@ footer {
   font-size: 18px;
 }
 
+/* Footer styling */
+footer {
+    background-color: #4f46e5;
+    background-image: linear-gradient(to right, #4f46e5, #3b82f6);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
 
 
 /* Responsive */
@@ -242,16 +294,6 @@ footer {
   }
 }
 
-
-/* Footer styling */
-footer {
-    background-color: #4f46e5;
-    background-image: linear-gradient(to right, #4f46e5, #3b82f6);
-    color: white;
-    padding: 2rem 0;
-    margin-top: 3rem;
-    text-align: center;
-}
 
 
 /* Responsif */
@@ -272,3 +314,98 @@ footer {
     align-items: center;
   }
 }
+/*responsive design*/
+@media (max-width: 1024px) {
+  .card {
+    width: 45%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .slider-overlay h1 {
+    font-size: 30px;
+  }
+
+  .slider-overlay p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+
+  .info-section,
+  .contact-form {
+    margin: 20px 10px;
+    padding: 20px 10px;
+  }
+
+  .slider-header {
+    height: 250px;
+  }
+
+  .slider-overlay h1 {
+    font-size: 24px;
+  }
+
+  .slider-overlay p {
+    font-size: 14px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .slider-header {
+    height: 200px;
+  }
+
+  .slider-overlay h1 {
+    font-size: 20px;
+  }
+
+  .slider-overlay p {
+    font-size: 12px;
+  }
+
+  input, textarea, button {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+

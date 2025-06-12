@@ -40,3 +40,17 @@ document.getElementById("messageForm").addEventListener("submit", function (e) {
   document.getElementById("output").innerHTML = output;
   this.reset();
 });
+
+
+  const logo = document.getElementById('logo');
+  const nav = document.querySelector('.navbar');
+
+  logo.addEventListener('click', () => {
+    // Hanya aktif jika layar kecil
+    if (window.innerWidth <= 1024) {
+      nav.classList.toggle('nav-open');
+    }
+  });
+
+  
+
