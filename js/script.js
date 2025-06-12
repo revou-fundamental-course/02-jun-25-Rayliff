@@ -3,8 +3,8 @@ function showAlert(message) {
 }
 
 const images = [
-  "gambar1.jpg",
-  "gambar2.png",
+  "./assets/gambar1.jpg",
+  "./assets/gambar2.png",
 ];
 
 let currentImage = 0;
