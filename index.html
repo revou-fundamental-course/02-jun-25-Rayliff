@@ -1,60 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Website - Raihan Aliff.W</title>
-    <!--CSS External-->
-    <link rel="stylesheet" href="CSS\style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Profil Rai</title>
+  <link rel="stylesheet" href="./CSS/style.css" />
 </head>
 <body>
-    <!--Header Content-->
-    <header class="main-header">
+  <nav class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#message-us">Message Us</a></li>
+    </ul>
+  </nav>
+
+  <header class="slider-header">
+  <div class="slider-overlay">
+    <h1>Welcome to my porto website</h1>
+    <p>I'm a future Software Engineer</p>
+  </div>
+  <img id="slider-image" src="gambar1.jpg" alt="Gambar Slider">
+</header>
+
+
+
+  <main>
+    <section id="about" class="info-section">
+      <h2>Halo Perkenalkan Saya Raihan Aliff Wahyudinnur</h2>
+      <p>Saya sering dipanggil Raihan. Saya adalah seorang fresh graduate dari jurusan Teknik Informatika. Selama perkuliahan, saya orang yang awam dengan coding, tapi selama berjalannya waktu saya menemukan ketertarikan pada HTML, CSS, Javascript. 
+         Saat ini saya sedang mengikuti kurus Software Engineering Fundamental Course. Dengan tujuan mendapatkan pengalaman, ilmu, dan perkembangan baru didunia teknologi.</p>
+    </section>
+  
+    <section id="education" class="card">
+      <img class="logoedu" src="assets/LOGO STMIK WiCiDa.png" alt="Kampus Logo">
+      <h4>STMIK Widya Cipta Dharma</h4>
+        <p>Teknik Informatika</p>
+        <p>2020-2024 </p>
         
-            <!--Logo Website-->
-            <div class="main-logo"></div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#our-profile">Our Profile</a>
-            <a href="achivment">Achivment</a>
-            <a href="#message-us">Message Us</a>
-        </nav>
-    </header>
+    </section>
 
-    <hr/>
+    <section class="card">
+      <h2>Education</h2>
+      <img class="logoedu" src="assets/educationpng.png" alt="Education Logo">
+    </section>
 
-    <!--Main Content-->
-    <main>
-        <!--Home Section-->
-        <section id="home">
-            <h1>Hi there, welcome to my portofolio Website!</h1>
-            <p>My name is Raihan Aliff Wahyudinnur and I am a .....</p>
+    <section class="card">
+      <img class="logoedu" src="assets/LOGO SMAN 8 SAMARINDA.png" alt="Kampus Logo">
+      <h4>STMIK Widya Cipta Dharma</h4>
+        <p>IPA</p>
+        <p>2017-2020</p>
+        
+    </section>
 
-            <!--Banner Section-->
-            <div class="banner-img"></div>
-        </section>
+    <section id="project" class="info-section">
+      <h2>Project</h2>
+      <p>Mini Project Revou</p>
+      <p>Ini adalah tugas mini project dari Revou, membuat website portofolio dengan menggunakan html, css, dan javascript.</p>
+    </section>
 
-        <hr/>
+  <section id="experience" class="info-section">
+    <h2>Experience</h2>
+    <p>Dinas Komunikasi dan Informasi Prov Kaltim Samarinda (KKP-Kuliah Kerja Praktek)</p>
+    <p>Sekretariat</p>
+    <p>Agustus 2023 - September 2023</p>
+    <p>Bertanggung jawab dalam menginput data menggunakan Microsoft Excel, memastikan ketelitian dan kecepatan dalam pengolahan data</p>
+  </section>
 
-        <!--Our Profil Section-->
-        <section id="our-profile">
-            <h1>Our Profile</h1>
-            <p1>Seorang Fresh Graduate yang sedang nganggur</p1>
-        </section>
+  <section id="message-us" class="contact-form">
+    <h2>Message Us</h2>
+    <form id="messageForm">
+      <input type="text" id="name" placeholder="Nama" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="tel" id="phone" placeholder="Nomor Telepon" required />
+      <textarea id="message" placeholder="Pesan" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+    <div id="output"></div>
+  </section>
+  </main>
 
-        <hr/>
-
-        <!--Message US Section-->
-        <section id="message-us">
-            <h1>Message US</h1>
-            <p>If you have any question, feel free to reach out</p>
-        </section>
-    </main>
-    
-    <!--Footer-->
-    <footer>
-        <p>&copy; 2025 Raihan Aliff Wahyudinnur. All rights reserved.</p>
+  <!-- footer -->
+     <footer>
+        
+            <p>&copy; 2025 Raihan Aliff Wahyudinnur. All rights reserved.</p>
+            <p>Terima kasih telah mengunjungi website saya!</p>
+        
     </footer>
-    
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
